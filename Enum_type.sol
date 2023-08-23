@@ -22,4 +22,12 @@ contract Enum_web3{
      function setExcellent() public {
         grade = Grade.excellent;
     }
+     // Update status by passing uint into input
+      function cancel() public {
+        grade = Grade.good;
+    }
+
+      function fair() public {
+        grade = Grade.fair;
+    }
 }
