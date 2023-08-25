@@ -30,4 +30,18 @@ contract Enum_web3{
       function fair() public {
         grade = Grade.fair;
     }
+
+    //return both member and uint
+     function getGradeByIndex(uint8 index) public pure returns (string memory, uint8) {
+        
+        if (index == uint(Grade.excellent)) {
+            return ("excellent", uint8(Grade.excellent));
+        } else if (index == uint8(Grade.good)) {
+            return ("good", uint8(Grade.good));
+        } else if (index == uint8(Grade.fair)) {
+            return ("fair", uint8(Grade.fair));
+        } else if (index == uint8(Grade.fail)) {
+            return ("fail", uint8(Grade.fail));
+        }
+    }
 }
